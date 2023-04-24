@@ -89,7 +89,17 @@ class CommentRepositoryTest {
         }
         // 과제
         /* Case 2 : "kim"의 모든 댓글 조회 */{
-
+            // 입력 데이터 준비
+            String nickname = "kim";
+            // 실제 수행
+            List<Comment> comments = commentRepository.findByNickname(nickname);
+            // 예상하기
+            Comment a = new Comment(2L, new Article(4L, "당신의 인생 영화는?", "댓글 ㄱ"),nickname,"아바타");
+            Comment b = new Comment(5L, new Article(5L, "당신의 소울 푸드는?", "댓글 ㄱㄱ"),nickname,"피자");
+            Comment c = new Comment(8L, new Article(6L, "당신의 취미는?", "댓글 ㄱㄱㄱ "),nickname,"자전거");
+            List <Comment> expected = Arrays.asList(a,b,c);
+            // 검증
+            assertEquals(expected.toString(),comments.toString(),"kim의 모든 데이터 출력!");
         }
         /* Case 3 : null 의 모든 댓글 조회 */ {
 

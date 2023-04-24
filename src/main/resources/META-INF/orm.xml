@@ -12,7 +12,7 @@
                 SELECT
                     *
                 FROM
-                    comment
+                    COMMENT
                 WHERE
                     nickname = :nickname
     ]]>
