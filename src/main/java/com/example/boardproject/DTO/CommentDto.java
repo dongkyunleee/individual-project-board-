@@ -2,14 +2,12 @@ package com.example.boardproject.DTO;
 
 import com.example.boardproject.Entity.Comment;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@Setter
 @ToString
 public class CommentDto {
     private Long id;
